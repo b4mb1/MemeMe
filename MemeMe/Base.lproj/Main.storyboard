@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O1l-NN-yrY"/>
+                        <viewControllerLayoutGuide type="bottom" id="p99-Q2-fTz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xtf-yp-qcq">
+                                <rect key="frame" x="108" y="140" width="384" height="319"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xtf-yp-qcq" secondAttribute="height" multiplier="78:59" constant="-37.72881355932202" id="djK-f3-Kar"/>
+                                </constraints>
+                            </imageView>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntz-yH-v3N">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="sxS-dg-uhV">
+                                        <connections>
+                                            <action selector="takeAPhoto:" destination="BYZ-38-t0r" id="wgY-oj-1dq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Album" id="X6W-oD-Zxj">
+                                        <connections>
+                                            <action selector="pickAPhoto:" destination="BYZ-38-t0r" id="HOq-fu-JkK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5P-Ae-QPe">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="faJ-H3-M5R">
+                                        <connections>
+                                            <action selector="sharePhoto:" destination="BYZ-38-t0r" id="iqx-qt-cHD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D5P-Ae-QPe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1cc-PN-glE"/>
+                            <constraint firstItem="p99-Q2-fTz" firstAttribute="top" secondItem="ntz-yH-v3N" secondAttribute="bottom" id="A3v-on-1fa"/>
+                            <constraint firstItem="D5P-Ae-QPe" firstAttribute="top" secondItem="O1l-NN-yrY" secondAttribute="bottom" id="Crf-fy-Gju"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D5P-Ae-QPe" secondAttribute="trailing" constant="-20" id="HtA-He-aIn"/>
+                            <constraint firstItem="Xtf-yp-qcq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a0S-k0-86y"/>
+                            <constraint firstItem="Xtf-yp-qcq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="akM-lJ-L9E"/>
+                            <constraint firstItem="ntz-yH-v3N" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="d1g-Um-kfy"/>
+                            <constraint firstItem="Xtf-yp-qcq" firstAttribute="top" secondItem="O1l-NN-yrY" secondAttribute="bottom" constant="120" id="iw5-LE-u9j"/>
+                            <constraint firstItem="Xtf-yp-qcq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" constant="84" id="mB4-oQ-aRH"/>
+                            <constraint firstItem="p99-Q2-fTz" firstAttribute="top" secondItem="ntz-yH-v3N" secondAttribute="bottom" id="pv1-Si-CDj"/>
+                            <constraint firstItem="ntz-yH-v3N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="z7p-uG-PrT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="faJ-H3-M5R" id="XVj-bF-87t"/>
+                        <outlet property="albumButton" destination="X6W-oD-Zxj" id="pAX-9e-87g"/>
+                        <outlet property="bottomBar" destination="ntz-yH-v3N" id="hUt-Rg-h6J"/>
+                        <outlet property="cameraButton" destination="sxS-dg-uhV" id="SyW-a0-flg"/>
+                        <outlet property="imagePickerView" destination="Xtf-yp-qcq" id="D7T-eE-X1V"/>
+                        <outlet property="topBar" destination="D5P-Ae-QPe" id="VBK-en-l9y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402" y="382"/>
+        </scene>
+    </scenes>
+</document>
