@@ -30,7 +30,8 @@ class ViewController: UIViewController {
     // constraints
     // vertical spacing to margins after changing textfields
     // set capitalized string in ipads
-    
+    //there is a bug when clicking first bottom then top without returning from bottom
+    // button to quit app
     
     override func viewDidLoad() {
         super.viewDidLoad()
